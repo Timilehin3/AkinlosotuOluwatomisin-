@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Akinlosotu Oluwatomisin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-content">
+        <div class="logo">Oluwatomisin</div>
+        <div class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <button class="theme-toggle" onclick="toggleTheme()">🌓</button>
+      </div>
+    </nav>
+
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Hi, I'm Akinlosotu Oluwatomisin Success</h1>
+          <p>Full Stack Developer</p>
+          <p>Crafting digital experiences with passion and precision.</p>
+        </div>
+        <div class="hero-image">
+      
+          <img
+            src="20250129_195314.jpg"
+            alt="Profile Image"
+            class="profile-img"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="skills" id="skills">
+      <h2>My Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <i class="skill-icon fab fa-html5"></i>
+          <h3 class="skill-name">HTML5</h3>
+          <div class="skill-level">
+            <div class="skill-progress" style="width: 90%"></div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <i class="skill-icon fab fa-css3-alt"></i>
+          <h3 class="skill-name">CSS3</h3>
+          <div class="skill-level">
+            <div class="skill-progress" style="width: 60%"></div>
+          </div>
+        </div>
+        <div class="skill-card">
+          <i class="skill-icon fab fa-js"></i>
+          <h3 class="skill-name">JavaScript</h3>
+          <div class="skill-level">
+            <div class="skill-progress" style="width: 20%"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="projects" id="projects">
+      <h2>My Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <img
+            src="construction.JPG"
+            alt="Construction Website"
+            class="project-img"
+          />
+          <div class="project-info">
+            <h3>Construction Website</h3>
+            <p>Personal Project</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="hoody.JPG" alt="Hoody Shopping" class="project-img" />
+          <div class="project-info">
+            <h3>A Hoody Shopping site</h3>
+            <p>Personal Project</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <img
+            src="Recipe website.JPG"
+            alt="Recipe Website"
+            class="project-img"
+          />
+          <div class="project-info">
+            <h3>Recipe Website</h3>
+            <p>Personal Project</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2>Contact Me</h2>
+      <form id="contact-form" onsubmit="return validateForm(event)">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="social-links">
+          <a href="https://github.com/Timilehin3" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/oluwatomisin-a-11b36a326" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="https://x.com/Akteo45?t=0mYhTZyP3jpIuMznj6KT9g&s=09" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://wa.me/qr/NJ4CSOOY66WXC1" target="_blank"><i class="fas fa-envelope"></i></a>
+      </div>
+      <p>&copy; 2025 Oluwatomisin Success. All rights reserved.</p>
+
+    <script src="script.js"></script>
+  </body>
+</html>
