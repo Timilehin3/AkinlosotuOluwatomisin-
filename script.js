@@ -27,8 +27,45 @@ function validateForm(event) {
     return false;
   }
 
-  alert("Form submitted successfully!");
-  return true;
+  // If validation passes, submit via AJAX
+  submitForm();
+  return false;
+}
+
+// Async Form Submission
+function submitForm() {
+  const form = document.getElementById("contact-form");
+  const status = document.getElementById("form-status");
+  const data = new FormData(form);
+
+  fetch("https://formspree.io/f/mrbqjjwp", {
+    method: "POST",
+    body: data,
+    headers: {
+      Accept: "application/json",
+    },
+  })
+    .then((response) => {
+      if (response.ok) {
+        status.textContent = "Thank you! Your message has been sent.";
+        status.style.color = "green";
+        form.reset();
+        ["name", "email", "message"].forEach((field) => {
+          localStorage.removeItem(field);
+        });
+      } else {
+        response.json().then((data) => {
+          status.textContent = data.errors
+            ? data.errors.map((e) => e.message).join(", ")
+            : "Oops! There was a problem submitting your form.";
+          status.style.color = "red";
+        });
+      }
+    })
+    .catch((error) => {
+      status.textContent = "Oops! There was a problem submitting your form.";
+      status.style.color = "red";
+    });
 }
 
 // Scroll Animation
@@ -75,9 +112,5 @@ window.addEventListener("load", function () {
   });
 });
 
-// Clear form storage after successful submission
-form.addEventListener("submit", function () {
-  ["name", "email", "message"].forEach((field) => {
-    localStorage.removeItem(field);
-  });
-});
+// Attach validation to form submit
+form.addEventListener("submit", validateForm);
