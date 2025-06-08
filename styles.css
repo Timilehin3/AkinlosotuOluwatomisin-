@@ -15,7 +15,7 @@
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Work Sans", sans-serif;
   background-color: var(--dark-bg);
   color: var(--light-primary);
   line-height: 1.6;
@@ -118,6 +118,27 @@ body.light-theme {
   text-decoration: none;
   border-radius: 5px;
   font-size: 0.9rem;
+}
+
+.project-links a,
+.project-card a {
+  text-decoration: none;
+  color: var(--light-primary);
+  transition: text-decoration-color 0.3s, color 0.3s, text-underline-offset 0.3s;
+}
+
+.light-theme .project-links a,
+.light-theme .project-card a {
+  color: var(--dark-bg);
+  text-decoration: none;
+  transition: text-decoration-color 0.3s, color 0.3s, text-underline-offset 0.3s;
+}
+
+.project-links a:hover,
+.project-card a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  color: var(--light-accent);
 }
 
 /* Skills Section Styles */
