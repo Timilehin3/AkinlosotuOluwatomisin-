@@ -203,9 +203,12 @@ body.light-theme {
 @media (max-width: 768px) {
   .mobile-menu-btn {
     display: block;
+    position: relative;
+    z-index: 1001;
   }
 
   .nav-links {
+    display: flex;
     position: fixed;
     top: 60px;
     left: 0;
@@ -224,6 +227,17 @@ body.light-theme {
 
   .project-grid {
     grid-template-columns: 1fr;
+  }
+
+  .hero-content {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .profile-img {
+    width: 200px;
+    height: 200px;
   }
 }
 
@@ -464,22 +478,4 @@ body.light-theme {
 
 .light-theme .social-links a {
   color: var(--dark-bg);
-}
-
-/* Responsiveness*/
-@media (max-width: 768px) {
-  .hero-content {
-    flex-direction: column-reverse;
-    text-align: center;
-    gap: 2rem;
-  }
-
-  .profile-img {
-    width: 200px;
-    height: 200px;
-  }
-
-  .nav-links {
-    display: none;
-  }
 }

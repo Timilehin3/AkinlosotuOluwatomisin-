@@ -85,8 +85,17 @@ document
 // Mobile Menu Toggle
 function toggleMobileMenu() {
   const navLinks = document.querySelector(".nav-links");
+  const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
   navLinks.classList.toggle("active");
+  mobileMenuBtn.setAttribute(
+    "aria-expanded",
+    navLinks.classList.contains("active").toString()
+  );
 }
+
+document
+  .querySelector(".mobile-menu-btn")
+  ?.addEventListener("click", toggleMobileMenu);
 
 // Smooth Scroll
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
