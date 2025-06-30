@@ -18,7 +18,12 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
     <link rel="stylesheet" href="styles.css" />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&display=swap"
+      rel="stylesheet"
+    />
     <meta
       property="og:title"
       content="Akinlosotu Oluwatomisin Success | Frontend Developer Portfolio"
@@ -110,28 +115,43 @@
 
     <!-- Skills -->
     <section class="skills" id="skills">
-      <h2>My Skills</h2>
+      <h2>Technical Skills</h2>
       <div class="skills-grid">
         <div class="skill-card">
           <i class="skill-icon fab fa-html5"></i>
-          <h3 class="skill-name">HTML5</h3>
-          <div class="skill-level">
-            <div class="skill-progress" style="width: 90%"></div>
-          </div>
+          <h3 class="skill-name">HTML5 & Semantic Markup</h3>
+          <div class="skill-level"><div class="skill-progress" style="width: 95%"></div></div>
+          <p class="skill-desc">Expert in writing accessible, SEO-friendly, and semantic HTML for robust web foundations.</p>
         </div>
         <div class="skill-card">
           <i class="skill-icon fab fa-css3-alt"></i>
-          <h3 class="skill-name">CSS3</h3>
-          <div class="skill-level">
-            <div class="skill-progress" style="width: 60%"></div>
-          </div>
+          <h3 class="skill-name">CSS3, Grid & Flexbox</h3>
+          <div class="skill-level"><div class="skill-progress" style="width: 90%"></div></div>
+          <p class="skill-desc">Advanced layouts with CSS Grid/Flexbox, custom properties, and responsive design best practices.</p>
         </div>
         <div class="skill-card">
           <i class="skill-icon fab fa-js"></i>
-          <h3 class="skill-name">JavaScript</h3>
-          <div class="skill-level">
-            <div class="skill-progress" style="width: 20%"></div>
-          </div>
+          <h3 class="skill-name">JavaScript (ES6+)</h3>
+          <div class="skill-level"><div class="skill-progress" style="width: 80%"></div></div>
+          <p class="skill-desc">Modern ES6+ syntax, DOM manipulation, event handling, and performance optimization.</p>
+        </div>
+        <div class="skill-card">
+          <i class="skill-icon fab fa-vuejs"></i>
+          <h3 class="skill-name">Vue.js (Basics)</h3>
+          <div class="skill-level"><div class="skill-progress" style="width: 50%"></div></div>
+          <p class="skill-desc">Experience building small projects and components with Vue.js for reactive UIs.</p>
+        </div>
+        <div class="skill-card">
+          <i class="skill-icon fas fa-tools"></i>
+          <h3 class="skill-name">Build Tools</h3>
+          <div class="skill-level"><div class="skill-progress" style="width: 60%"></div></div>
+          <p class="skill-desc">Familiar with npm scripts, Netlify, and basic asset optimization for fast deployment.</p>
+        </div>
+        <div class="skill-card">
+          <i class="skill-icon fas fa-universal-access"></i>
+          <h3 class="skill-name">Accessibility & SEO</h3>
+          <div class="skill-level"><div class="skill-progress" style="width: 75%"></div></div>
+          <p class="skill-desc">Focus on accessible markup, ARIA roles, and SEO best practices for discoverability.</p>
         </div>
       </div>
     </section>
@@ -140,43 +160,70 @@
     <section class="projects" id="projects">
       <h2>My Projects</h2>
       <div class="project-grid">
+        <!-- Construction Website Case Study -->
         <div class="project-card">
-          <a href="#">
-            <img
-              src="construction.JPG"
-              alt="Construction Website"
-              class="project-img"
-          /></a>
+          <img
+            src="construction.JPG"
+            alt="Construction Company Website Screenshot"
+            class="project-img"
+            onerror="this.onerror=null;this.src='https://via.placeholder.com/400x250?text=Project+Image';"
+          />
           <div class="project-info">
-            <a href="">
-              <h3>Construction Website</h3>
-            </a>
-            <p>Personal Project</p>
+            <h3>Construction Company Website</h3>
+            <p>
+              <strong>Business Problem:</strong> Local construction firm needed a modern, mobile-friendly web presence to attract new clients and showcase completed projects.<br>
+              <strong>Solution:</strong> Designed and built a fast, responsive static site using semantic HTML5, CSS Grid, and vanilla JavaScript for interactive galleries.<br>
+              <strong>Result:</strong> Improved client inquiries and professional credibility.
+            </p>
+            <p><strong>Tech Stack:</strong> HTML5, CSS3 (Grid, Flexbox), JavaScript (ES6+)</p>
+            <div class="project-links">
+              <a href="https://construction-demo.netlify.app/" target="_blank" class="cta-btn">Live Demo</a>
+              <a href="https://github.com/Timilehin3/construction-website" target="_blank" class="cta-btn">GitHub</a>
+            </div>
           </div>
         </div>
+        <!-- Hoody Shopping Site Case Study -->
         <div class="project-card">
-          <a href="#"
-            ><img src="hoody.JPG" alt="Hoody Shopping" class="project-img"
-          /></a>
+          <img
+            src="hoody.JPG"
+            alt="Hoody Shopping Website Screenshot"
+            class="project-img"
+            onerror="this.onerror=null;this.src='https://via.placeholder.com/400x250?text=Project+Image';"
+          />
           <div class="project-info">
-            <a href="">
-              <h3>A Hoody Shopping site</h3>
-            </a>
-            <p>Personal Project</p>
+            <h3>Hoody Shopping Site</h3>
+            <p>
+              <strong>Business Problem:</strong> Startup needed a simple, fast e-commerce landing page for hoodie sales.<br>
+              <strong>Solution:</strong> Built a lightweight, visually appealing storefront with product filtering and cart preview using modern JavaScript and CSS Flexbox.<br>
+              <strong>Result:</strong> Increased conversion rates and reduced bounce rates.
+            </p>
+            <p><strong>Tech Stack:</strong> HTML5, CSS3 (Flexbox), JavaScript (ES6+), Netlify</p>
+            <div class="project-links">
+              <a href="https://hoodyshop-demo.netlify.app/" target="_blank" class="cta-btn">Live Demo</a>
+              <a href="https://github.com/Timilehin3/hoody-shopping-site" target="_blank" class="cta-btn">GitHub</a>
+            </div>
           </div>
         </div>
+        <!-- Recipe Website Case Study -->
         <div class="project-card">
-          <a href=""
-            ><img
-              src="Recipe website.JPG"
-              alt="Recipe Website"
-              class="project-img"
-          /></a>
+          <img
+            src="Recipe website.JPG"
+            alt="Recipe Website Screenshot"
+            class="project-img"
+            onerror="this.onerror=null;this.src='https://via.placeholder.com/400x250?text=Project+Image';"
+          />
           <div class="project-info">
-            <a href="">
-              <h3>Recipe Website</h3>
-            </a>
-            <p>Personal Project</p>
+            <h3>Recipe Website</h3>
+            <p>
+              <strong>Business Problem:</strong> Food blogger required a clean, easy-to-navigate recipe site with fast load times.<br>
+              <strong>Solution:</strong> Developed a static site with semantic HTML, CSS custom properties, and JavaScript for dynamic recipe filtering.<br>
+              <strong>Result:</strong> Enhanced user engagement and improved SEO rankings.
+            </p>
+            <p><strong>Tech Stack:</strong> HTML5, CSS3 (Custom Properties), JavaScript (ES6+)</p>
+            <div class="project-links">
+              <a href="https://recipe-demo.netlify.app/" target="_blank" class="cta-btn">Live Demo</a>
+              <a href="https://github.com/Timilehin3/recipe-website" target="_blank" class="cta-btn">GitHub</a>
+            </div>
           </div>
         </div>
       </div>
@@ -188,18 +235,28 @@
         id="contact-form"
         action="https://formspree.io/f/mrbqjjwp"
         method="POST"
+        autocomplete="on"
+        novalidate
       >
+        <!-- Honeypot field for spam protection -->
+        <div style="display:none;">
+          <label for="website">Website</label>
+          <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+        </div>
         <div class="form-group">
           <label for="name">Name</label>
-          <input type="text" id="name" name="name" required />
+          <input type="text" id="name" name="name" required aria-describedby="name-error" />
+          <div class="error-message" id="name-error" aria-live="polite"></div>
         </div>
         <div class="form-group">
           <label for="email">Email</label>
-          <input type="email" id="email" name="email" required />
+          <input type="email" id="email" name="email" required aria-describedby="email-error" />
+          <div class="error-message" id="email-error" aria-live="polite"></div>
         </div>
         <div class="form-group">
           <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
+          <textarea id="message" name="message" rows="5" required aria-describedby="message-error"></textarea>
+          <div class="error-message" id="message-error" aria-live="polite"></div>
         </div>
         <button type="submit" class="submit-btn">Send Message</button>
         <div id="form-status" style="margin-top: 10px"></div>

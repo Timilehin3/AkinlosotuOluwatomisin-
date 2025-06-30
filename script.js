@@ -7,23 +7,45 @@ function toggleTheme() {
 function validateForm(event) {
   event.preventDefault();
 
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const message = document.getElementById("message").value;
+  // Clear previous errors
+  ["name", "email", "message"].forEach((field) => {
+    document.getElementById(field + "-error").textContent = "";
+  });
+  document.getElementById("form-status").textContent = "";
+
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const message = document.getElementById("message").value.trim();
+  const website = document.getElementById("website").value;
+
+  let valid = true;
+
+  // Honeypot spam check
+  if (website !== "") {
+    document.getElementById("form-status").textContent = "Spam detected. Submission blocked.";
+    document.getElementById("form-status").style.color = "red";
+    return false;
+  }
 
   if (name.length < 2) {
-    alert("Please enter a valid name");
-    return false;
+    document.getElementById("name-error").textContent = "Please enter a valid name.";
+    valid = false;
   }
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email)) {
-    alert("Please enter a valid email address");
-    return false;
+    document.getElementById("email-error").textContent = "Please enter a valid email address.";
+    valid = false;
   }
 
   if (message.length < 10) {
-    alert("Please enter a message with at least 10 characters");
+    document.getElementById("message-error").textContent = "Please enter a message with at least 10 characters.";
+    valid = false;
+  }
+
+  if (!valid) {
+    document.getElementById("form-status").textContent = "Please fix the errors above and try again.";
+    document.getElementById("form-status").style.color = "red";
     return false;
   }
 
